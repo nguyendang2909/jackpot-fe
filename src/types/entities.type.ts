@@ -4,6 +4,8 @@ export type User = {
   createdAt?: string;
   updatedAt?: string;
   cards?: Card[];
+  coin?: string;
+  diamond?: string;
 };
 
 type Card = {

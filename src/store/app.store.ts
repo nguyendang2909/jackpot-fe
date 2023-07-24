@@ -5,6 +5,8 @@ import { PersistedAppState } from 'types/store.type';
 const initialState: PersistedAppState = {
   accessToken: null,
   profile: {
+    coin: '91.50',
+    diamond: '2,082',
     cards: [
       {
         id: '1',

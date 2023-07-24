@@ -1,9 +1,12 @@
+import { useAppSelector } from 'hooks/store.hook';
 import React from 'react';
 import { styled } from 'styled-components';
 
 import { Profile } from './Profile';
 
 export const HeaderTopLeft: React.FC = () => {
+  const coin = useAppSelector(state => state.app.profile.coin);
+  const diamond = useAppSelector(state => state.app.profile.diamond);
   return (
     <>
       <ProfileContainer>
@@ -15,14 +18,14 @@ export const HeaderTopLeft: React.FC = () => {
             <CoinIcon src="/static/images/NewAsset/icon_coin.png" />
           </CoinIconBox>
           <FlexGrow />
-          <CoinTypography>91.50</CoinTypography>
+          <CoinTypography>{coin}</CoinTypography>
         </CoinContainer>
         <CoinContainer>
           <CoinIconBox>
             <CoinIcon src="/static/images/NewAsset/icon_diamond.png" />
           </CoinIconBox>
           <FlexGrow />
-          <CoinTypography>2,082</CoinTypography>
+          <CoinTypography>{diamond}</CoinTypography>
         </CoinContainer>
       </HeaderTopLeftBox>
     </>
